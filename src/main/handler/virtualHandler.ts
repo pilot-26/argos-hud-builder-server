@@ -1,7 +1,7 @@
 import { app, ipcMain } from 'electron'
 import vigemclient from 'vigemclient'
 import { X360Controller } from 'vigemclient/lib/X360Controller'
-import { IControllerInput } from './data/types'
+import { IControllerInput } from '../virtual/data/types'
 
 let client = new vigemclient() 
 client.connect()

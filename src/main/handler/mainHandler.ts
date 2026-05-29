@@ -7,14 +7,14 @@ const isDev = !app.isPackaged
 export let mainWindow: BrowserWindow | null = null
 export const createWindow = (): void => {
   mainWindow = new BrowserWindow({
-    width: 600,
-    height: 400,
-    minWidth: 600,
-    minHeight: 400,
+    width: 300,
+    height: 500,
+    minWidth: 300,
+    minHeight: 500,
     resizable: true,
     frame: true,
     webPreferences: {
-      partition: 'persist:argos',
+      partition: 'persist:argos-server',
       nodeIntegration: false,
       contextIsolation: true,
       preload: path.join(__dirname, '..', 'preload.js'),

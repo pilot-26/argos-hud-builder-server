@@ -1,7 +1,7 @@
 import { app, BrowserWindow, Menu } from 'electron'
-import './index'
-import { createWindow } from "./index"
-import "./virtual/virtualHandler"
+import './handler/mainHandler'
+import { createWindow } from "./handler/mainHandler"
+import "./handler/virtualHandler"
 
 const isDev = !app.isPackaged
 
@@ -10,6 +10,7 @@ if (require('electron-squirrel-startup')) {
 }
 
 app.whenReady().then(() => {
+  console.log("running")
   Menu.setApplicationMenu(null)
   createWindow()
 
