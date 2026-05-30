@@ -56,10 +56,10 @@ const createTray = () => {
   console.log('Icon path:', iconPath)
   try {
     tray = new Tray(iconPath)
-    tray.setToolTip('Argos HUD Builder Server')
+    tray.setToolTip('Argos Server')
     const contextMenu = Menu.buildFromTemplate([
       {
-        label: 'ARGOS HUD Server',
+        label: 'ARGOS Server',
         type: "normal",
         icon: iconPath,
         click: () => createMainWindow()
